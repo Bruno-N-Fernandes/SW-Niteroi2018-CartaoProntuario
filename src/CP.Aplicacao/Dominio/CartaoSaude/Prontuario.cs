@@ -1,5 +1,6 @@
 ﻿using CP.Aplicacao.Infra;
 using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace CP.Aplicacao.Dominio.CartaoSaude
 {
@@ -9,6 +10,9 @@ namespace CP.Aplicacao.Dominio.CartaoSaude
 		public String CNS { get; set; }
 		public Int64 CPF { get; set; }
 		public String Nome { get; set; }
+
+		[DataType(DataType.Date)]
+		[DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
 		public DateTime Nascimento { get; set; }
 		public String NomeDaMae { get; set; }
 		public Byte[] Foto { get; set; }
