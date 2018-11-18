@@ -23,7 +23,16 @@ namespace CP.WebApp.Controllers
 
 		public ActionResult Registrar()
 		{
-			return View();
+			if (ProntuarioId.HasValue)
+			{
+				var prontuario = ProntuarioService.ObterProntuario(ProntuarioId.Value);
+				return View("Cartao", prontuario);
+			}
+			else
+			{
+				var prontuario = new Prontuario { AspNetUsersId = AspNetUserId, DataRegistro = DateTime.Now };
+				return View("Registrar", prontuario);
+			}
 		}
 
 		[HttpPost]
@@ -75,7 +84,30 @@ namespace CP.WebApp.Controllers
 
 		public ActionResult Cartao(int id)
 		{
-			return View();
+			if (ProntuarioId.HasValue)
+			{
+				var prontuario = ProntuarioService.ObterProntuario(ProntuarioId.Value);
+				return View("Cartao", prontuario);
+			}
+			else
+			{
+				var prontuario = new Prontuario { AspNetUsersId = AspNetUserId, DataRegistro = DateTime.Now };
+				return View("Registrar", prontuario);
+			}
+		}
+
+		public ActionResult Emergencia(string id)
+		{
+			var prontuarioId = ProntuarioService.ObterProntuarioId(id);
+			if (prontuarioId.HasValue)
+			{
+				var prontuario = ProntuarioService.ObterProntuario(prontuarioId.Value);
+				return View("Cartao", prontuario);
+			}
+			else
+			{
+				return View();
+			}
 		}
 	}
 }

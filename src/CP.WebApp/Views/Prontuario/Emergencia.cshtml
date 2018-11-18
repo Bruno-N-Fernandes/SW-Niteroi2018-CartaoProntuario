@@ -1,0 +1,101 @@
+﻿@model CP.Aplicacao.Dominio.CartaoSaude.Prontuario
+
+@{
+    ViewBag.Title = "Cartao";
+}
+
+<h2>Cartao</h2>
+
+<div>
+    <h4>Prontuario</h4>
+    <hr />
+	<dl class="dl-horizontal">
+		<dt>
+			@Html.DisplayNameFor(model => model.AspNetUsersId)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.AspNetUsersId)
+		</dd>
+
+		<dt>
+			@Html.DisplayNameFor(model => model.CNS)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.CNS)
+		</dd>
+
+		<dt>
+			@Html.DisplayNameFor(model => model.CPF)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.CPF)
+		</dd>
+
+		<dt>
+			@Html.DisplayNameFor(model => model.Nome)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.Nome)
+		</dd>
+
+		<dt>
+			@Html.DisplayNameFor(model => model.Nascimento)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.Nascimento)
+		</dd>
+
+		<dt>
+			@Html.DisplayNameFor(model => model.NomeDaMae)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.NomeDaMae)
+		</dd>
+
+		<dt>
+			@Html.DisplayNameFor(model => model.TipoSanguineo)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.TipoSanguineo)
+		</dd>
+
+		<dt>
+			@Html.DisplayNameFor(model => model.Telefone)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.Telefone)
+		</dd>
+
+		<dt>
+			@Html.DisplayNameFor(model => model.ContatoEmergencia)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.ContatoEmergencia)
+		</dd>
+
+		<dt>
+			@Html.DisplayNameFor(model => model.DataRegistro)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.DataRegistro)
+		</dd>
+
+		<dd>
+			<img width="200" height="200" src="@Model.QRCode" />
+		</dd>
+	</dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

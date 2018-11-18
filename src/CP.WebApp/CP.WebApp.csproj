@@ -274,6 +274,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Prontuario\Registrar.cshtml" />
     <Content Include="Views\Prontuario\Cartao.cshtml" />
+    <Content Include="Views\Prontuario\Emergencia.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CP.Aplicacao\CP.Aplicacao.csproj">
