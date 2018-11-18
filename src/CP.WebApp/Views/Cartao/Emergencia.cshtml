@@ -60,11 +60,11 @@
 
 		<br /><br />
 		<dd>
-			<img width="200" height="200" src="~/Content/Img/Bruno.jpeg" />
+			<img width="200" height="300" src="~/Content/Img/Bruno.jpeg" />
 		</dd>
 	</dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model?.Id }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
