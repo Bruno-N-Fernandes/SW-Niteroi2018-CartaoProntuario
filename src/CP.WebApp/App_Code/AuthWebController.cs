@@ -7,7 +7,7 @@ namespace CP.WebApp.App_Code
 		protected override void OnActionExecuting(ActionExecutingContext filterContext)
 		{
 			if (!User.Identity.IsAuthenticated)
-				Response.Redirect($"~/Login/Login?ReturnPage={Request.Url.PathAndQuery}");
+				Response.Redirect($"~/Account/Login?ReturnPage={Request.Url.PathAndQuery}");
 			else
 				base.OnActionExecuting(filterContext);
 		}
