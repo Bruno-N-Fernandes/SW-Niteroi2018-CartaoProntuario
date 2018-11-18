@@ -1,28 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using CP.WebApp.App_Code;
 using System.Web.Mvc;
 
 namespace CP.WebApp.Controllers
 {
-    public class HomeController : Controller
+	public class HomeController : BaseController
     {
         public ActionResult Index()
         {
+            ViewBag.Message = "Your application description page." + AspNetUserId;
             return View();
         }
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Your application description page." + AspNetUserId;
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Your contact page." ;
 
             return View();
         }
