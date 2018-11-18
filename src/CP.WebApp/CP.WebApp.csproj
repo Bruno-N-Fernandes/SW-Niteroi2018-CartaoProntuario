@@ -197,6 +197,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CartaoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ProntuarioController.cs" />
@@ -215,6 +216,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Img\Bruno.jpeg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -274,7 +276,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Prontuario\Registrar.cshtml" />
     <Content Include="Views\Prontuario\Cartao.cshtml" />
-    <Content Include="Views\Prontuario\Emergencia.cshtml" />
+    <Content Include="Views\Cartao\Emergencia.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CP.Aplicacao\CP.Aplicacao.csproj">

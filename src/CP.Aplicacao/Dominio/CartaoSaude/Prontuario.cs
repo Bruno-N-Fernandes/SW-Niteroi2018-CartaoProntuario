@@ -21,6 +21,6 @@ namespace CP.Aplicacao.Dominio.CartaoSaude
 		public String ContatoEmergencia { get; set; }
 		public DateTime DataRegistro { get; set; }
 
-		public String QRCode { get => "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=http://www.cartaoprontuario.co/Prontuario/Emergencia/" + AspNetUsersId; }
+		public String QRCode { get => "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=http://www.cartaoprontuario.co/Cartao/Emergencia/" + AspNetUsersId; }
 	}
 }

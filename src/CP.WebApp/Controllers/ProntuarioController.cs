@@ -96,18 +96,5 @@ namespace CP.WebApp.Controllers
 			}
 		}
 
-		public ActionResult Emergencia(string id)
-		{
-			var prontuarioId = ProntuarioService.ObterProntuarioId(id);
-			if (prontuarioId.HasValue)
-			{
-				var prontuario = ProntuarioService.ObterProntuario(prontuarioId.Value);
-				return View("Cartao", prontuario);
-			}
-			else
-			{
-				return View();
-			}
-		}
 	}
 }
